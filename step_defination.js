@@ -1,7 +1,6 @@
 const { Given, When, Then } = require('@wdio/cucumber-framework');
 const assert = require('assert');
 
-// Utility function to wait for an element to be visible
 async function waitForVisible(selector, timeout = 5000) {
     const element = await $(selector);
     await element.waitForDisplayed({ timeout });
